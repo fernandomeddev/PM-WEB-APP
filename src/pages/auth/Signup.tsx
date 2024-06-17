@@ -19,8 +19,6 @@ const signupSchema = z.object({
 type SignupData = z.infer<typeof signupSchema>;
 
 export function Signup() {
-
-
   const form = useForm<SignupData>({
     resolver: zodResolver(signupSchema),
     defaultValues: {
@@ -43,6 +41,7 @@ export function Signup() {
       form.reset();
     } catch (error) {
       toast.error('Erro ao registrar usuário');
+      form.reset();
     }
   }
 
