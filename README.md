@@ -1,30 +1,68 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Tasks-Web
 
-Currently, two official plugins are available:
+Tasks-Web é um projeto web desenvolvido com React, TypeScript e Vite. Ele utiliza várias bibliotecas modernas para construção de UI, gerenciamento de formulários, roteamento e validação. O projeto está configurado para desenvolvimento rápido com hot-reloading e possui scripts para construção, linting e pré-visualização.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Índice
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Executando a Aplicação](#executando-a-aplicação)
+- [Executando a Aplicação com Docker](#executando-a-aplicação-com-docker)
+- [Executando Testes](#executando-testes)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Licença](#licença)
 
-## Expanding the ESLint configuration
+## Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Certifique-se de ter o seguinte instalado:
 
-- Configure the top-level `parserOptions` property like this:
+- [Node.js](https://nodejs.org/) (se executar sem Docker)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Instalação
+
+1. Clone o repositório:
+
+   ```sh
+   git clone git@github.com:fernandomeddev/taskweb.git
+   
+
+## Executando a Aplicação
+1. Instale as dependências:
+
+   ```sh
+   npm install
+
+2. Construa o projeto:
+
+   ```sh
+   npm run dev
+
+O servidor estará em execução em http://localhost:5173.
+
+
+## Estrutura do Projeto
+   ```sh
+   tasks-web/
+├── src/
+│   ├── components/
+│   ├── hooks/
+│   ├── pages/
+│   ├── services/
+│   ├── styles/
+│   ├── utils/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── vite-env.d.ts
+├── public/
+│   ├── index.html
+├── dist/
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+
+
+## Licença
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
